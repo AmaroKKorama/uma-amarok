@@ -93,7 +93,7 @@ const io = new Server(server, {
 app.use(cors({ origin: CORS_ORIGIN }));
 app.use(express.json({ limit: "6mb" }));
 
-app.get("/", (_req, res) => {
+app.get("/api/health", (_req, res) => {
   res.json({ status: "ok", message: "Messenger server is running" });
 });
 
